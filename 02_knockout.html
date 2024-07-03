@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Knock out
+Spelet har 2st tärningar.
+Du som spelare väljer ett “knock out number” – antingen 6, 7, 8, eller 9.
+Du som spelare väljer också vilken poäng som skall uppnås för att spelet skall avslutas.
+Spelaren kastar båda tärningarna. Anteckna varje kasts resultat.
+Om spelaren kastar något utav "knock out numbers" ges minuspoäng -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let out = 6;
+      let win = 30;
+      let player1 = 0;
+      let player2 = 0;
+      function getRndInteger(1, 9, num) {
+        // let min = 1;
+        // let max = 6;
+
+        let tar = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (tar != out) {
+          playernum;
+          tar = getRndInteger(min, max, num);
+        }
+        else{
+
+
+        }
+      }
+    </script>
+    <br />
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,6,1)">
+      Player1</button
+    ><br /><br />
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,6,2)">
+      Player2
+    </button>
+  </body>
+</html>
