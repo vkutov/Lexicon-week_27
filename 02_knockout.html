@@ -38,11 +38,11 @@ Om spelaren kastar något utav "knock out numbers" ges minuspoäng -->
           alert("oops, Sum1-" + tar);
           tar -= kOut1;
         }
-        alert("player1 - " + tar);
+        // alert("player1 - " + tar);
         player1.push(tar);
         alert(" Sum1-" + sumArr(player1));
-        if (sumArr(player1) >= 30) {
-          console.log("Winner 1!");
+        if (sumArr(player1) >= win) {
+          alert("Winner player 1!");
         }
       }
       function tarCast2() {
@@ -56,7 +56,7 @@ Om spelaren kastar något utav "knock out numbers" ges minuspoäng -->
         player2.push(tar);
         alert("Sum2-" + sumArr(player2));
         if (sumArr(player2) >= win) {
-          console.log("Winner 2!");
+          alert("Winner -player 2!");
         }
       }
     </script>
