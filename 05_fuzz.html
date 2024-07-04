@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fizz() {
+        for (let i = 1; i <= 100; i++) {
+          let fizz = "";
+          if (i % 3 == 0) {
+            fizz += "Fizz";
+          }
+          if (i % 5 == 0) {
+            fizz += "Buzz";
+          }
+          if (fizz != "") {
+            alert(i + " number gives " + fizz);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Fizzbuzz
+Loopa igenom hundra nummer och om:
+
+Numret är dividerbart med 3, skriv ut "Fizz"
+Numret är dividerbart med 5, skriv ut "Buzz"
+Numret är dividerbart med 3 och 5, skriv ut "FizzBuzz"    -->
+    <br /><br />
+    <button onclick="fizz()">Fizz the Buzz</button>
+  </body>
+</html>

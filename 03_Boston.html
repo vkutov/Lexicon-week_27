@@ -1,0 +1,61 @@
+<html lang="en">
+  <!-- //     Spelet har 3st tärningar.
+
+// Kasta tärningarna och spara tärningen med högsta värdet.
+// Kasta de kvarvarande 2 och spara tärningen med högsta värdet.
+// Kasta sista tärningen och summera samtliga tre tärningar.
+// Spelaren med högst summerat värde vinner. Max poäng är 18. -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var dice_data = [];
+      function tarCast(player) {
+        let sum = 0;
+        let min = 1;
+        let max = 9;
+        let dice1 = Math.floor(Math.random() * (max - min + 1)) + min;
+        let dice2 = Math.floor(Math.random() * (max - min + 1)) + min;
+        let dice3 = Math.floor(Math.random() * (max - min + 1)) + min;
+        let dices = [dice1, dice2, dice3];
+        let winner = Math.max(...dices);
+        sum += winner;
+        let index = dices.indexOf(winner);
+
+        if (index > -1) {
+          // only splice array when item is found
+          dices.splice(index, 1); // 2nd parameter means remove one item only
+        }
+
+        dices[0] = Math.floor(Math.random() * (max - min + 1)) + min;
+        dices[1] = Math.floor(Math.random() * (max - min + 1)) + min;
+        winner = Math.max(...dices);
+        sum += winner;
+        dices[0] = Math.floor(Math.random() * (max - min + 1)) + min;
+        sum += dices[0];
+        dice_data = sum;
+        alert("Player " + player + " got :" + sum);
+        return dice_data;
+      }
+      function win() {
+        let dice1 = dice_data[0];
+        let dice2 = dice_data[1];
+        if (dice1 >= dice2) {
+          alert("Winner is player 1");
+        } else {
+          alert("Winner is player 2");
+        }
+      }
+    </script>
+    <br />
+    <button onclick="tarCast(1)">Player1</button>
+    <br /><br />
+    <button onclick="tarCast(2)">Player2</button>
+    <br /><br />
+    <button onclick="win()">check winner</button>
+  </body>
+</html>

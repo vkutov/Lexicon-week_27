@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function guess(n){
+            let secret=33;
+            if(n<secret){
+              let num =  prompt("for low, guess again");
+              guess(num);
+            }else if(n>secret){
+
+                let num = prompt("for hight, guess again ");
+                guess(num);
+
+            }else{
+                alert("That is right")
+            }
+
+        }
+    </script>
+  </head>
+  <body>
+    <!-- Fråga användaren efter ett tal mellan 1 och 100. Programmet ska ha ett hemligt tal sparat. Det
+    ska fortsätta fråga användaren till dess att användaren gissar det hemliga talet. Om man gissade
+    för högt eller för lågt så ska det skrivas ut, så att användaren har en rimlig chans att klara
+    det. -->
+     <script>
+       let num = prompt("Guess a number");
+       guess(num);
+     </script>
+  </body>
+  </body>
+</html>
