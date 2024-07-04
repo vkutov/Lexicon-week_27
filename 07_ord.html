@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Söka efter likheter mellan ord
+Fråga användaren efter två ord, och kontrollera därefter hur många bokstäver som förekommer på samma plats i båda orden. -->
+    <script>
+      let num = 0;
+      let ord1 = prompt("Ord 1");
+      let ord2 = prompt("Ord 2");
+      for (i = 0; i < ord1.length; i++) {
+        for (j = 0; j < ord2.length; j++) {
+          if (ord1[i] == ord2[j]) {
+            num++;
+          }
+        }
+      }
+      alert(num);
+    </script>
+  </body>
+</html>
